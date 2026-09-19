@@ -490,7 +490,8 @@ html, body { margin: 0; padding: 0; }
 .md-achievements-modal__overlay { position: absolute; inset: 0; }
 .md-achievements-modal__box {
     position: relative; z-index: 1; background: var(--md-white);
-    width: 100%; max-width: 1200px; height: 100vh; max-height: 100vh;
+    width: 100%; max-width: 1200px;
+    height: 100vh; height: 100dvh; max-height: 100vh; max-height: 100dvh;
     display: flex; flex-direction: column; overflow: hidden;
     box-shadow: 0 24px 64px rgba(0,0,0,0.3);
 }
@@ -511,10 +512,18 @@ html, body { margin: 0; padding: 0; }
 }
 .md-achievements-modal__close:hover { background: var(--md-card-bg); color: var(--md-dark); }
 .md-achievements-modal__close svg { display: block; width: 24px; height: 24px; }
-.md-achievements-modal__content { flex: 1; display: flex; overflow: hidden; }
+
+.md-achievements-modal__content {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    overflow: hidden;
+}
+
 .md-achievements-modal__list {
     width: 40%; overflow-y: auto; padding: 24px 32px;
     border-right: 1px solid var(--md-divider); background: var(--md-card-bg);
+    flex-shrink: 0;
 }
 .md-achievements-modal__list-title {
     font-family: var(--md-font); font-size: 14px; font-weight: 700;
@@ -539,27 +548,50 @@ html, body { margin: 0; padding: 0; }
     font-family: var(--md-font); font-size: 15px; line-height: 1.4;
     color: var(--md-dark); flex: 1;
 }
+
+/* Галерея — ключевые свойства для корректного сжатия */
 .md-achievements-modal__gallery {
-    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
-    padding: 24px 32px; position: relative; overflow: hidden;
+    flex: 1 1 0;
+    min-height: 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 32px;
+    position: relative;
+    overflow: hidden;
 }
 .md-achievements-modal__gallery-track {
-    display: flex; height: 100%; align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
     transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
 }
 .md-achievements-modal__gallery-slide {
-    flex-shrink: 0; width: 100%; height: 100%;
-    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
 }
 .md-achievements-modal__gallery-img {
-    width: 100%; height: 100%; object-fit: contain; display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
 }
 .md-achievements-modal__gallery-nav {
     position: absolute;
-    top: 50%;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    transform: translateY(-50%);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -568,22 +600,29 @@ html, body { margin: 0; padding: 0; }
     pointer-events: none;
 }
 .md-achievements-modal__gallery-btn {
-    background: rgba(255,255,255,0.9);
-    border: none; cursor: pointer;
-    width: 48px; height: 48px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--md-dark); transition: background 0.2s, color 0.2s;
+    background: rgba(255,255,255,0.92);
+    border: none;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--md-dark);
+    transition: background 0.2s, color 0.2s;
     pointer-events: auto;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
     flex-shrink: 0;
 }
 .md-achievements-modal__gallery-btn:hover { background: var(--md-teal); color: #fff; }
 .md-achievements-modal__gallery-btn:disabled { opacity: 0.3; pointer-events: none; }
 .md-achievements-modal__gallery-btn svg { display: block; width: 20px; height: 20px; }
 .md-achievements-modal__gallery-counter {
-    position: absolute; top: 24px; right: 32px;
+    position: absolute; top: 16px; right: 16px;
     font-family: var(--md-font); font-size: 14px; color: var(--md-muted);
-    background: var(--md-white); padding: 8px 16px; border-radius: 20px;
+    background: var(--md-white); padding: 6px 14px; border-radius: 20px;
+    z-index: 11;
 }
 
 /* ============================================================
@@ -677,7 +716,7 @@ html, body { margin: 0; padding: 0; }
 .md-reviews-pagination__btn svg { display: block; width: 18px; height: 18px; }
 
 /* ============================================================
-   RESPONSIVE
+   RESPONSIVE — Tablet
    ============================================================ */
 @media (max-width: 1199px) {
     .md-header { border-radius: 0 0 30px 30px; padding: 10px 20px; min-height: 76px; }
@@ -704,6 +743,9 @@ html, body { margin: 0; padding: 0; }
     .md-photos__item { width: 240px; height: 320px; }
 }
 
+/* ============================================================
+   RESPONSIVE — Mobile
+   ============================================================ */
 @media (max-width: 767px) {
     .md-header { border-radius: 0 0 20px 20px; padding: 8px 14px; min-height: 64px; }
     .md-header__logo { height: 44px; }
@@ -782,14 +824,27 @@ html, body { margin: 0; padding: 0; }
     .md-review-item__columns { grid-template-columns: 1fr; gap: 16px; }
     .md-review-carousel { aspect-ratio: 3/4; }
 
+    /* Достижения на мобилке — список сверху, галерея снизу, стрелки по бокам */
     .md-achievements-modal__content { flex-direction: column; }
-    .md-achievements-modal__list { width: 100%; max-height: 40%; border-right: none; border-bottom: 1px solid var(--md-divider); }
-    .md-achievements-modal__gallery { padding: 16px; }
-    .md-achievements-modal__gallery-btn { width: 40px; height: 40px; }
-    .md-achievements-modal__gallery-btn svg { width: 16px; height: 16px; }
-    .md-achievements-modal__gallery-counter { top: 16px; right: 16px; font-size: 12px; padding: 6px 12px; }
+    .md-achievements-modal__list {
+        width: 100%;
+        max-height: 38%;
+        flex-shrink: 0;
+        border-right: none;
+        border-bottom: 1px solid var(--md-divider);
+        padding: 16px;
+    }
     .md-achievements-modal__list-item { padding: 12px; margin-bottom: 8px; }
     .md-achievements-modal__list-item-text { font-size: 14px; }
+    .md-achievements-modal__gallery {
+        flex: 1 1 0;
+        min-height: 0;
+        padding: 12px 4px;
+    }
+    .md-achievements-modal__gallery-slide { padding: 0 36px; }
+    .md-achievements-modal__gallery-btn { width: 36px; height: 36px; }
+    .md-achievements-modal__gallery-btn svg { width: 14px; height: 14px; }
+    .md-achievements-modal__gallery-counter { top: 8px; right: 8px; font-size: 12px; padding: 4px 10px; }
     .md-achievements-modal__title { font-size: 18px; }
     .md-achievements-modal__header { padding: 14px 16px; }
 }
