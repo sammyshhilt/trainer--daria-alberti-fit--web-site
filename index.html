@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Морозова Дарья — персональный фитнес-тренер</title>
+  <meta name="description" content="Персональный фитнес-тренер Морозова Дарья. Тарифы, расписание, дипломы и ответы на частые вопросы.">
+  <link rel="preconnect" href="https://fonts.tildacdn.com">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section class="md-page" aria-label="Сайт Морозовой Дарьи — персональный фитнес-тренер">
+
+  <!-- ===== Header ===== -->
+  <header class="md-header">
+    <div class="md-header__logo">
+      <img src="img/logo.png" alt="Alberti Fitness">
+    </div>
+    <button class="md-header__menu-btn" type="button" aria-label="Открыть меню" id="mdMenuBtn">
+      <img src="img/menu-icon.png" alt="Меню">
+    </button>
+  </header>
+
+  <!-- ===== Mobile Menu ===== -->
+  <div class="md-menu-overlay" id="mdOverlay"></div>
+  <nav class="md-menu" id="mdMenu" aria-label="Навигация">
+    <button class="md-menu__close" type="button" aria-label="Закрыть меню" id="mdMenuClose">
+      <span></span><span></span>
+    </button>
+    <div class="md-menu__logo">
+      <img src="img/logo.png" alt="Daria Alberti">
+    </div>
+    <ul class="md-menu__nav">
+      <li><a href="#contacts" id="mdMenuLink">Контакты</a></li>
+      <li><a href="#tarif" id="mdMenuLink2">Тарифы</a></li>
+      <li><a href="#rules" id="mdMenuLink3">Правила записи</a></li>
+      <li><a href="#faq" id="mdMenuLink4">Частые вопросы</a></li>
+    </ul>
+    <div class="md-menu__buttons">
+      <a href="https://t.me/daria_alberti_fit" target="_blank" class="md-menu__btn">Написать в Telegram</a>
+      <a href="https://wa.me/79067247132" target="_blank" class="md-menu__btn">Написать в WhatsApp</a>
+      <a href="https://www.instagram.com/daria_alberti_fitt?stkn=dzg4MWE1ZWo2ZnU0" target="_blank" class="md-menu__btn">Написать в Instagram</a>
+    </div>
+  </nav>
+
+  <!-- ===== Profile ===== -->
+  <div class="md-profile" id="contacts">
+    <div class="md-profile__avatar-wrap">
+      <img class="md-profile__avatar" src="img/avatar.png" alt="Фото Морозовой Дарьи">
+    </div>
+    <div class="md-profile__info">
+      <h1 class="md-profile__name">Морозова Дарья</h1>
+      <p class="md-profile__desc">дипломированный персональный фитнес-тренер</p>
+      <div class="md-profile__tabs">
+        <button type="button" id="mdTabEducation" class="md-profile__tab-btn active">Образование</button>
+        <button type="button" id="mdTabAchievements" class="md-profile__tab-btn">Достижения</button>
+      </div>
+    </div>
+    <div class="md-profile__actions">
+      <a href="https://t.me/daria_alberti_fit" target="_blank" class="md-btn md-btn--tg">Написать в Telegram</a>
+      <a href="https://wa.me/79067247132" target="_blank" class="md-btn md-btn--wa">Написать в WhatsApp</a>
+      <a href="https://www.instagram.com/daria_alberti_fitt?stkn=dzg4MWE1ZWo2ZnU0" target="_blank" class="md-btn md-btn--ig">Написать в Instagram</a>
+    </div>
+  </div>
+
+  <!-- ===== Photos Strip ===== -->
+  <div class="md-photos" aria-label="Фотографии тренера">
+    <div class="md-photos__scroll">
+      <div class="md-photos__item"><img src="img/private/pr1.webp" alt="Фото тренера 1"></div>
+      <div class="md-photos__item"><img src="img/private/pr2.webp" alt="Фото тренера 2"></div>
+      <div class="md-photos__item"><img src="img/private/pr3.webp" alt="Фото тренера 3"></div>
+      <div class="md-photos__item"><img src="img/private/pr4.webp" alt="Фото тренера 4"></div>
+      <div class="md-photos__item"><img src="img/private/pr5.webp" alt="Фото тренера 5"></div>
+      <div class="md-photos__item"><img src="img/private/pr6.webp" alt="Фото тренера 6"></div>
+    </div>
+  </div>
+
+  <!-- ===== Hours ===== -->
+  <div class="md-hours" id="hours">
+    <div class="md-hours__inner">
+      <div class="md-hours__icon-wrap">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <circle cx="18" cy="18" r="14" stroke="#fff" stroke-width="2.5"></circle>
+          <path d="M18 10v8l5 3" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+      <div class="md-hours__text">
+        <p class="md-hours__label">Часы работы</p>
+        <p class="md-hours__time"><span>6:00</span> — <span>00:00</span></p>
+        <p class="md-hours__sub">Кроме выходных, выходные — СБ и ВС</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Achievements Modal ===== -->
+  <div class="md-achievements-modal" id="mdAchievementsModal" role="dialog" aria-modal="true" aria-label="Достижения">
+    <div class="md-achievements-modal__overlay" id="mdAchievementsOverlay"></div>
+    <div class="md-achievements-modal__box">
+      <div class="md-achievements-modal__header">
+        <h2 class="md-achievements-modal__title">Достижения</h2>
+        <button class="md-achievements-modal__close" id="mdAchievementsClose" aria-label="Закрыть">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 3l18 18M21 3L3 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+        </button>
+      </div>
+      <div class="md-achievements-modal__content">
+        <div class="md-achievements-modal__list" id="mdAchievementsList">
+          <span class="md-achievements-modal__list-title">Регалии</span>
+          <div class="md-achievements-modal__list-item active" data-achievement="0">
+            <div class="md-achievements-modal__list-item-icon">1</div>
+            <div class="md-achievements-modal__list-item-text">3 место на турнире DUDUSHKIN FITNESS FAMILY GRAND-PRIX 2021</div>
+          </div>
+          <div class="md-achievements-modal__list-item" data-achievement="1">
+            <div class="md-achievements-modal__list-item-icon">2</div>
+            <div class="md-achievements-modal__list-item-text">1 место на Открытом Кубке городского округа Балашиха 2021</div>
+          </div>
+          <div class="md-achievements-modal__list-item" data-achievement="2">
+            <div class="md-achievements-modal__list-item-icon">3</div>
+            <div class="md-achievements-modal__list-item-text">Топ 6 Кубка Москвы по бодибилдингу 2021</div>
+          </div>
+          <div class="md-achievements-modal__list-item" data-achievement="3">
+            <div class="md-achievements-modal__list-item-icon">4</div>
+            <div class="md-achievements-modal__list-item-text">2 место на турнире DUDUSHKIN FITNESS FAMILY GRAND-PRIX 2022</div>
+          </div>
+          <div class="md-achievements-modal__list-item" data-achievement="4">
+            <div class="md-achievements-modal__list-item-icon">5</div>
+            <div class="md-achievements-modal__list-item-text">Топ 6 Открытого Чемпионата Московской Области 2022</div>
+          </div>
+          <div class="md-achievements-modal__list-item" data-achievement="5">
+            <div class="md-achievements-modal__list-item-icon">6</div>
+            <div class="md-achievements-modal__list-item-text">Топ 4 Кубка Москвы по Бодибилдингу 2022</div>
+          </div>
+          <div class="md-achievements-modal__list-item" data-achievement="6">
+            <div class="md-achievements-modal__list-item-icon">7</div>
+            <div class="md-achievements-modal__list-item-text">Участница Чемпионата Москвы 2023</div>
+          </div>
+          <div class="md-achievements-modal__list-item" data-achievement="7">
+            <div class="md-achievements-modal__list-item-icon">8</div>
+            <div class="md-achievements-modal__list-item-text">Многократная победительница соревнований</div>
+          </div>
+        </div>
+        <div class="md-achievements-modal__gallery">
+          <span class="md-achievements-modal__gallery-counter">
+            <span id="mdAchievementCurrentImg">1</span> / <span id="mdAchievementTotalImg">5</span>
+          </span>
+          <div class="md-achievements-modal__gallery-track" id="mdAchievementGalleryTrack">
+            <div class="md-achievements-modal__gallery-slide"><img class="md-achievements-modal__gallery-img" src="img/grants/grant1.webp" alt="Достижение 1"></div>
+            <div class="md-achievements-modal__gallery-slide"><img class="md-achievements-modal__gallery-img" src="img/grants/grant2.webp" alt="Достижение 2"></div>
+            <div class="md-achievements-modal__gallery-slide"><img class="md-achievements-modal__gallery-img" src="img/grants/grant3.webp" alt="Достижение 3"></div>
+            <div class="md-achievements-modal__gallery-slide"><img class="md-achievements-modal__gallery-img" src="img/grants/grant4.webp" alt="Достижение 4"></div>
+            <div class="md-achievements-modal__gallery-slide"><img class="md-achievements-modal__gallery-img" src="img/grants/grant5.webp" alt="Достижение 5"></div>
+          </div>
+          <div class="md-achievements-modal__gallery-nav">
+            <button class="md-achievements-modal__gallery-btn" id="mdAchievementGalleryPrev" aria-label="Предыдущее фото" disabled>
+              <svg viewBox="0 0 20 20" fill="none"><path d="M12.5 5L7.5 10L12.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </button>
+            <button class="md-achievements-modal__gallery-btn" id="mdAchievementGalleryNext" aria-label="Следующее фото">
+              <svg viewBox="0 0 20 20" fill="none"><path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Diplomas Lightbox ===== -->
+  <div class="md-lightbox" id="mdCertModal" role="dialog" aria-modal="true" aria-label="Дипломы">
+    <div class="md-lightbox__overlay" id="mdCertOverlay"></div>
+    <div class="md-lightbox__box">
+      <div class="md-lightbox__header">
+        <p class="md-lightbox__title">Дипломы и сертификаты</p>
+        <button class="md-lightbox__close" id="mdCertClose" aria-label="Закрыть">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 2l14 14M16 2L2 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+        </button>
+      </div>
+      <div class="md-lightbox__carousel">
+        <div class="md-lightbox__track" id="mdCertTrack">
+          <div class="md-lightbox__slide">
+            <img class="md-lightbox__diploma-img" src="img/diploma-1.png" alt="Диплом о профессиональной переподготовке">
+          </div>
+        </div>
+      </div>
+      <div class="md-lightbox__footer">
+        <button class="md-lightbox__nav" id="mdCertPrev" aria-label="Назад" disabled>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 5L7.5 10L12.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </button>
+        <span class="md-lightbox__counter" id="mdCertCounter">1 / 1</span>
+        <button class="md-lightbox__nav" id="mdCertNext" aria-label="Вперёд" disabled>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Reviews Lightbox (Результаты подопечных) ===== -->
+  <div class="md-lightbox" id="mdReviewModal" role="dialog" aria-modal="true" aria-label="Результаты подопечных">
+    <div class="md-lightbox__overlay" id="mdReviewOverlay"></div>
+    <div class="md-lightbox__box">
+      <div class="md-lightbox__header">
+        <p class="md-lightbox__title">Результаты подопечных</p>
+        <button class="md-lightbox__close" id="mdReviewClose" aria-label="Закрыть">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 2l14 14M16 2L2 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+        </button>
+      </div>
+
+      <div class="md-review-grid" id="mdReviewGrid">
+        <div class="md-review-item" data-client="0">
+          <div class="md-review-item__columns">
+            <div class="md-review-col">
+              <div class="md-review-col__label md-review-col__label--before">До</div>
+              <div class="md-review-carousel">
+                <div class="md-review-carousel__track">
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/before-front-1.webp" alt="До, спереди"></div>
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/before-back-1.webp" alt="До, сзади"></div>
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/before-side-1.webp" alt="До, сбоку"></div>
+                </div>
+                <div class="md-review-carousel__nav">
+                  <span class="md-review-carousel__dot active" data-index="0"></span>
+                  <span class="md-review-carousel__dot" data-index="1"></span>
+                  <span class="md-review-carousel__dot" data-index="2"></span>
+                </div>
+              </div>
+            </div>
+            <div class="md-review-col">
+              <div class="md-review-col__label md-review-col__label--after">После</div>
+              <div class="md-review-carousel">
+                <div class="md-review-carousel__track">
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/after-front-1.webp" alt="После, спереди"></div>
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/after-back-1.webp" alt="После, сзади"></div>
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/after-side-1.webp" alt="После, сбоку"></div>
+                </div>
+                <div class="md-review-carousel__nav">
+                  <span class="md-review-carousel__dot active" data-index="0"></span>
+                  <span class="md-review-carousel__dot" data-index="1"></span>
+                  <span class="md-review-carousel__dot" data-index="2"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="md-review-item" data-client="1">
+          <div class="md-review-item__columns">
+            <div class="md-review-col">
+              <div class="md-review-col__label md-review-col__label--before">До</div>
+              <div class="md-review-carousel">
+                <div class="md-review-carousel__track">
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/before-front-2.webp" alt="До, спереди"></div>
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/before-back-2.webp" alt="До, сзади"></div>
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/before-side-2.webp" alt="До, сбоку"></div>
+                </div>
+                <div class="md-review-carousel__nav">
+                  <span class="md-review-carousel__dot active" data-index="0"></span>
+                  <span class="md-review-carousel__dot" data-index="1"></span>
+                  <span class="md-review-carousel__dot" data-index="2"></span>
+                </div>
+              </div>
+            </div>
+            <div class="md-review-col">
+              <div class="md-review-col__label md-review-col__label--after">После</div>
+              <div class="md-review-carousel">
+                <div class="md-review-carousel__track">
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/after-front-2.webp" alt="После, спереди"></div>
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/after-back-2.webp" alt="После, сзади"></div>
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/after-side-2.webp" alt="После, сбоку"></div>
+                </div>
+                <div class="md-review-carousel__nav">
+                  <span class="md-review-carousel__dot active" data-index="0"></span>
+                  <span class="md-review-carousel__dot" data-index="1"></span>
+                  <span class="md-review-carousel__dot" data-index="2"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="md-review-item" data-client="2">
+          <div class="md-review-item__columns">
+            <div class="md-review-col">
+              <div class="md-review-col__label md-review-col__label--before">До</div>
+              <div class="md-review-carousel">
+                <div class="md-review-carousel__track">
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/before-front-3.webp" alt="До, спереди"></div>
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/before-back-3.webp" alt="До, сзади"></div>
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/before-side-3.webp" alt="До, сбоку"></div>
+                </div>
+                <div class="md-review-carousel__nav">
+                  <span class="md-review-carousel__dot active" data-index="0"></span>
+                  <span class="md-review-carousel__dot" data-index="1"></span>
+                  <span class="md-review-carousel__dot" data-index="2"></span>
+                </div>
+              </div>
+            </div>
+            <div class="md-review-col">
+              <div class="md-review-col__label md-review-col__label--after">После</div>
+              <div class="md-review-carousel">
+                <div class="md-review-carousel__track">
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/after-front-3.webp" alt="После, спереди"></div>
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/after-back-3.webp" alt="После, сзади"></div>
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/after-side-3.webp" alt="После, сбоку"></div>
+                </div>
+                <div class="md-review-carousel__nav">
+                  <span class="md-review-carousel__dot active" data-index="0"></span>
+                  <span class="md-review-carousel__dot" data-index="1"></span>
+                  <span class="md-review-carousel__dot" data-index="2"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="md-review-item" data-client="3">
+          <div class="md-review-item__columns">
+            <div class="md-review-col">
+              <div class="md-review-col__label md-review-col__label--before">До</div>
+              <div class="md-review-carousel">
+                <div class="md-review-carousel__track">
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/before-front-4.webp" alt="До, спереди"></div>
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/before-back-4.webp" alt="До, сзади"></div>
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/before-side-4.webp" alt="До, сбоку"></div>
+                </div>
+                <div class="md-review-carousel__nav">
+                  <span class="md-review-carousel__dot active" data-index="0"></span>
+                  <span class="md-review-carousel__dot" data-index="1"></span>
+                  <span class="md-review-carousel__dot" data-index="2"></span>
+                </div>
+              </div>
+            </div>
+            <div class="md-review-col">
+              <div class="md-review-col__label md-review-col__label--after">После</div>
+              <div class="md-review-carousel">
+                <div class="md-review-carousel__track">
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/after-front-4.webp" alt="После, спереди"></div>
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/after-back-4.webp" alt="После, сзади"></div>
+                  <div class="md-review-carousel__slide"><img class="md-review-carousel__img" src="img/result/after-side-4.webp" alt="После, сбоку"></div>
+                </div>
+                <div class="md-review-carousel__nav">
+                  <span class="md-review-carousel__dot active" data-index="0"></span>
+                  <span class="md-review-carousel__dot" data-index="1"></span>
+                  <span class="md-review-carousel__dot" data-index="2"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="md-lightbox__footer">
+        <button class="md-lightbox__nav" id="mdReviewPrev" aria-label="Предыдущий клиент" disabled>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 5L7.5 10L12.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </button>
+        <span class="md-lightbox__counter" id="mdReviewCounter">1 / 4</span>
+        <button class="md-lightbox__nav" id="mdReviewNext" aria-label="Следующий клиент">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Tariffs Section ===== -->
+  <div id="tarif">
+    <button class="md-sec__trigger" type="button" aria-expanded="true" aria-controls="secBodyTarif" id="secTriggerTarif">
+      <span class="md-sec__trigger-text">Тарифы занятий</span>
+      <span class="md-sec__trigger-arrow" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#1ea1b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </span>
+    </button>
+    <div class="md-sec__body" id="secBodyTarif">
+      <div class="md-tariff-note">
+        <p class="md-tariff-note__text">⚠ Тарифы в ранние (6:00 – 8:00) и поздние (22:00 – 00:00) часы работы отличаются!</p>
+      </div>
+      <div class="md-tabs">
+        <ul class="md-tabs__list" role="tablist">
+          <li class="md-tabs__item"><button class="md-tabs__btn" role="tab" aria-selected="true" aria-controls="panel-personal" id="tab-personal" type="button">Персональные</button></li>
+          <li class="md-tabs__item"><button class="md-tabs__btn" role="tab" aria-selected="false" aria-controls="panel-split" id="tab-split" type="button">Сплит (вдвоем)</button></li>
+          <li class="md-tabs__item"><button class="md-tabs__btn md-tabs__btn--vip" role="tab" aria-selected="false" aria-controls="panel-vip" id="tab-vip" type="button">Часы</button></li>
+        </ul>
+      </div>
+
+      <!-- Panel: Personal -->
+      <div class="md-tabs__panel active" id="panel-personal" role="tabpanel" aria-labelledby="tab-personal">
+        <div class="md-pricing">
+          <div class="md-card">
+            <div class="md-card__header"><h3 class="md-card__title">Разовое занятие</h3><div class="md-card__price-row"><span class="md-card__price">5.500₽</span><span class="md-card__dot"></span><span class="md-card__duration">60 мин</span></div></div>
+            <ul class="md-card__features">
+              <li>Индивидуальное планирование тренировки с учётом ваших целей и особенностей организма</li>
+              <li>Консультация по питанию</li>
+              <li>Возможность задать интересующие вопросы</li>
+            </ul>
+          </div>
+          <div class="md-card">
+            <div class="md-card__header"><h3 class="md-card__title">Блок из 5 занятий</h3><div class="md-card__price-row"><span class="md-card__price">20.000₽</span><span class="md-card__dot"></span><span class="md-card__duration">60 мин</span></div><span class="md-card__per">4.000₽</span></div>
+            <ul class="md-card__features">
+              <li>Индивидуальное планирование тренировки с учётом ваших целей и особенностей организма</li>
+              <li>Консультация по питанию</li>
+            </ul>
+            <hr class="md-card__sep"><p class="md-card__rule">Срок действия 40 дней с даты первой тренировки</p>
+          </div>
+          <div class="md-card">
+            <div class="md-card__header"><h3 class="md-card__title">Блок из 10 занятий</h3><div class="md-card__price-row"><span class="md-card__price">37.000₽</span><span class="md-card__dot"></span><span class="md-card__duration">60 мин</span></div><span class="md-card__per">3.700₽</span></div>
+            <ul class="md-card__features">
+              <li>Индивидуальное планирование тренировки с учётом ваших целей и особенностей организма</li>
+              <li>Консультация по питанию</li>
+              <li class="md-card__features--sub">Индивидуальный расчёт КБЖУ под ваши цели</li>
+            </ul>
+            <hr class="md-card__sep"><p class="md-card__rule">Срок действия 40 дней с даты первой тренировки</p>
+          </div>
+          <div class="md-card">
+            <div class="md-card__header"><h3 class="md-card__title">Блок из 15 занятий</h3><div class="md-card__price-row"><span class="md-card__price">52.500₽</span><span class="md-card__dot"></span><span class="md-card__duration">60 мин</span></div><span class="md-card__per">3.500₽</span></div>
+            <ul class="md-card__features">
+              <li>Индивидуальное планирование тренировки с учётом ваших целей и особенностей организма</li>
+              <li>Консультация по питанию</li>
+              <li class="md-card__features--sub">Индивидуальный расчёт КБЖУ под ваши цели</li>
+            </ul>
+            <hr class="md-card__sep"><p class="md-card__rule">Срок действия 60 дней с даты первой тренировки</p>
+            <div class="md-card__gift"><span class="md-card__gift-icon">🎁</span><span class="md-card__gift-text">Подборка полезностей «Проверено тренером»</span></div>
+            <div class="md-card__gift"><span class="md-card__gift-icon">🎁</span><span class="md-card__gift-text">Трекер прогресса</span></div>
+          </div>
+          <div class="md-card">
+            <div class="md-card__header"><h3 class="md-card__title">Блок из 20 занятий</h3><div class="md-card__price-row"><span class="md-card__price">66.000₽</span><span class="md-card__dot"></span><span class="md-card__duration">60 мин</span></div><span class="md-card__per">3.300₽</span></div>
+            <ul class="md-card__features">
+              <li>Индивидуальное планирование тренировки с учётом ваших целей и особенностей организма</li>
+              <li>Консультация по питанию</li>
+              <li class="md-card__features--sub">Индивидуальный расчёт КБЖУ под ваши цели</li>
+            </ul>
+            <hr class="md-card__sep"><p class="md-card__rule">Срок действия 70 дней с даты первой тренировки</p>
+            <div class="md-card__gift"><span class="md-card__gift-icon">🎁</span><span class="md-card__gift-text">Подборка полезностей «Проверено тренером»</span></div>
+            <div class="md-card__gift"><span class="md-card__gift-icon">🎁</span><span class="md-card__gift-text">Трекер прогресса</span></div>
+          </div>
+          <div class="md-card">
+            <div class="md-card__header"><h3 class="md-card__title">Дистанционное ведение</h3><div class="md-card__price-row"><span class="md-card__price">20.000₽</span><span class="md-card__dot"></span><span class="md-card__duration">1 месяц</span></div></div>
+            <ul class="md-card__features">
+              <li>Индивидуальное планирование тренировки с учётом ваших целей и особенностей организма</li>
+              <li>Консультация по питанию</li>
+              <li class="md-card__features--sub">Индивидуальный расчёт КБЖУ под ваши цели</li>
+            </ul>
+            <hr class="md-card__sep"><p class="md-card__rule">Срок действия 1 месяц</p>
+          </div>
+          <div class="md-card">
+            <div class="md-card__header"><h3 class="md-card__title">План тренировок</h3><div class="md-card__price-row"><span class="md-card__price">12.000₽</span><span class="md-card__dot"></span><span class="md-card__duration">1 месяц</span></div></div>
+            <ul class="md-card__features">
+              <li>Индивидуальное планирование тренировки с учётом ваших целей и особенностей организма</li>
+            </ul>
+            <hr class="md-card__sep"><p class="md-card__rule">Срок действия 1 месяц</p>
+          </div>
+          <div class="md-card">
+            <div class="md-card__header"><h3 class="md-card__title">План питания</h3><div class="md-card__price-row"><span class="md-card__price">12.000₽</span><span class="md-card__dot"></span><span class="md-card__duration">1 месяц</span></div></div>
+            <ul class="md-card__features">
+              <li>Индивидуальный план питания</li>
+              <li class="md-card__features--sub">Индивидуальный расчёт КБЖУ под ваши цели</li>
+              <li>Подборка базовых продуктов по рассчитанному КБЖУ</li>
+            </ul>
+            <hr class="md-card__sep"><p class="md-card__rule">Срок действия 1 месяц</p>
+          </div>
+          <div class="md-card">
+            <div class="md-card__header"><h3 class="md-card__title">Разовая консультация</h3><div class="md-card__price-row"><span class="md-card__price" style="color:var(--md-teal)">5.500₽</span><span class="md-card__dot"></span><span class="md-card__duration">1 час</span></div></div>
+            <ul class="md-card__features">
+              <li>Разбор продуктовой корзины</li>
+              <li>Разбор тренировочного плана</li>
+              <li>Ответы на вопросы</li>
+            </ul>
+            <hr class="md-card__sep"><p class="md-card__rule">Срок действия 7 дней с даты консультации</p>
+            <div class="md-card__gift"><span class="md-card__gift-icon">🎁</span><span class="md-card__gift-text">Подборка полезностей «Проверено тренером»</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel: Split -->
+      <div class="md-tabs__panel" id="panel-split" role="tabpanel" aria-labelledby="tab-split">
+        <div class="md-pricing">
+          <div class="md-card">
+            <div class="md-card__header"><h3 class="md-card__title">Разовое занятие</h3><div class="md-card__price-row"><span class="md-card__price">3.700₽/чел</span><span class="md-card__dot"></span><span class="md-card__duration">60 мин</span></div></div>
+            <ul class="md-card__features">
+              <li>Индивидуальное планирование тренировки с учётом ваших целей и особенностей организма</li>
+              <li>Консультация по питанию</li>
+              <li>Возможность задать интересующие вопросы</li>
+            </ul>
+          </div>
+          <div class="md-card">
+            <div class="md-card__header"><h3 class="md-card__title">Блок из 5 занятий</h3><div class="md-card__price-row"><span class="md-card__price">17.500₽/чел</span><span class="md-card__dot"></span><span class="md-card__duration">60 мин</span></div><span class="md-card__per">3.500₽</span></div>
+            <ul class="md-card__features">
+              <li>Индивидуальное планирование тренировки с учётом ваших целей и особенностей организма</li>
+              <li>Консультация по питанию</li>
+            </ul>
+            <hr class="md-card__sep"><p class="md-card__rule">Срок действия 40 дней с даты первой тренировки</p>
+          </div>
+          <div class="md-card">
+            <div class="md-card__header"><h3 class="md-card__title">Блок из 10 занятий</h3><div class="md-card__price-row"><span class="md-card__price">33.000₽/чел</span><span class="md-card__dot"></span><span class="md-card__duration">60 мин</span></div><span class="md-card__per">3.300₽</span></div>
+            <ul class="md-card__features">
+              <li>Индивидуальное планирование тренировки с учётом ваших целей и особенностей организма</li>
+              <li>Консультация по питанию</li>
+              <li class="md-card__features--sub">Индивидуальный расчёт КБЖУ под ваши цели</li>
+            </ul>
+            <hr class="md-card__sep"><p class="md-card__rule">Срок действия 40 дней с даты первой тренировки</p>
+          </div>
+          <div class="md-card">
+            <div class="md-card__header"><h3 class="md-card__title">Блок из 15 занятий</h3><div class="md-card__price-row"><span class="md-card__price">48.000₽/чел</span><span class="md-card__dot"></span><span class="md-card__duration">60 мин</span></div><span class="md-card__per">3.200₽</span></div>
+            <ul class="md-card__features">
+              <li>Индивидуальное планирование тренировки с учётом ваших целей и особенностей организма</li>
+              <li>Консультация по питанию</li>
+              <li class="md-card__features--sub">Индивидуальный расчёт КБЖУ под ваши цели</li>
+            </ul>
+            <hr class="md-card__sep"><p class="md-card__rule">Срок действия 60 дней с даты первой тренировки</p>
+            <div class="md-card__gift"><span class="md-card__gift-icon">🎁</span><span class="md-card__gift-text">Подборка полезностей «Проверено тренером»</span></div>
+            <div class="md-card__gift"><span class="md-card__gift-icon">🎁</span><span class="md-card__gift-text">Трекер прогресса</span></div>
+          </div>
+          <div class="md-card">
+            <div class="md-card__header"><h3 class="md-card__title">Блок из 20 занятий</h3><div class="md-card__price-row"><span class="md-card__price">62.000₽/чел</span><span class="md-card__dot"></span><span class="md-card__duration">60 мин</span></div><span class="md-card__per">3.100₽</span></div>
+            <ul class="md-card__features">
+              <li>Индивидуальное планирование тренировки с учётом ваших целей и особенностей организма</li>
+              <li>Консультация по питанию</li>
+              <li class="md-card__features--sub">Индивидуальный расчёт КБЖУ под ваши цели</li>
+            </ul>
+            <hr class="md-card__sep"><p class="md-card__rule">Срок действия 70 дней с даты первой тренировки</p>
+            <div class="md-card__gift"><span class="md-card__gift-icon">🎁</span><span class="md-card__gift-text">Подборка полезностей «Проверено тренером»</span></div>
+            <div class="md-card__gift"><span class="md-card__gift-icon">🎁</span><span class="md-card__gift-text">Трекер прогресса</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel: VIP -->
+      <div class="md-tabs__panel" id="panel-vip" role="tabpanel" aria-labelledby="tab-vip">
+        <div class="md-pricing">
+          <div class="md-card md-card--vip">
+            <div class="md-card__header"><h3 class="md-card__title">Блок из 10 занятий</h3><div class="md-card__price-row"><span class="md-card__price">47.000₽</span><span class="md-card__dot"></span><span class="md-card__duration">60 мин</span></div><span class="md-card__per">4.700₽</span></div>
+            <ul class="md-card__features">
+              <li>Индивидуальное планирование тренировки с учётом ваших целей и особенностей организма</li>
+              <li>Консультация по питанию</li>
+              <li class="md-card__features--sub">Индивидуальный расчёт КБЖУ под ваши цели</li>
+            </ul>
+            <hr class="md-card__sep"><p class="md-card__rule">Срок действия 40 дней с даты первой тренировки</p>
+          </div>
+          <div class="md-card md-card--vip">
+            <div class="md-card__header"><h3 class="md-card__title">Блок из 15 занятий</h3><div class="md-card__price-row"><span class="md-card__price">67.500₽</span><span class="md-card__dot"></span><span class="md-card__duration">60 мин</span></div><span class="md-card__per">4.500₽</span></div>
+            <ul class="md-card__features">
+              <li>Индивидуальное планирование тренировки с учётом ваших целей и особенностей организма</li>
+              <li>Консультация по питанию</li>
+              <li class="md-card__features--sub">Индивидуальный расчёт КБЖУ под ваши цели</li>
+            </ul>
+            <hr class="md-card__sep"><p class="md-card__rule">Срок действия 60 дней с даты первой тренировки</p>
+            <div class="md-card__gift"><span class="md-card__gift-icon">🎁</span><span class="md-card__gift-text">Подборка полезностей «Проверено тренером»</span></div>
+            <div class="md-card__gift"><span class="md-card__gift-icon">🎁</span><span class="md-card__gift-text">Трекер прогресса</span></div>
+          </div>
+          <div class="md-card md-card--vip">
+            <div class="md-card__header"><h3 class="md-card__title">Блок из 20 занятий</h3><div class="md-card__price-row"><span class="md-card__price">86.000₽</span><span class="md-card__dot"></span><span class="md-card__duration">60 мин</span></div><span class="md-card__per">4.300₽</span></div>
+            <ul class="md-card__features">
+              <li>Индивидуальное планирование тренировки с учётом ваших целей и особенностей организма</li>
+              <li>Консультация по питанию</li>
+              <li class="md-card__features--sub">Индивидуальный расчёт КБЖУ под ваши цели</li>
+            </ul>
+            <hr class="md-card__sep"><p class="md-card__rule">Срок действия 70 дней с даты первой тренировки</p>
+            <div class="md-card__gift"><span class="md-card__gift-icon">🎁</span><span class="md-card__gift-text">Подборка полезностей «Проверено тренером»</span></div>
+            <div class="md-card__gift"><span class="md-card__gift-icon">🎁</span><span class="md-card__gift-text">Трекер прогресса</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== Reviews Section ===== -->
+  <div class="md-reviews" id="reviews">
+    <button class="md-sec__trigger" type="button" aria-expanded="true" aria-controls="secBodyReviews" id="secTriggerReviews">
+      <span class="md-sec__trigger-text">Результаты подопечных</span>
+      <span class="md-sec__trigger-arrow" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#1ea1b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </span>
+    </button>
+    <div class="md-sec__body" id="secBodyReviews" style="padding-top:24px;">
+      <div style="text-align:center;padding:0 16px 32px;">
+        <button type="button" id="mdOpenReviews" class="md-btn md-btn--tg" style="min-width:auto;padding:16px 40px;">Смотреть результаты подопечных</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Client Reviews Section ("Отзывы") ===== -->
+  <div class="md-client-reviews" id="client-reviews">
+    <button class="md-sec__trigger" type="button" aria-expanded="true" aria-controls="secBodyClientReviews" id="secTriggerClientReviews">
+      <span class="md-sec__trigger-text">Отзывы</span>
+      <span class="md-sec__trigger-arrow" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#1ea1b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </span>
+    </button>
+    <div class="md-sec__body" id="secBodyClientReviews">
+      <div class="md-client-reviews__grid" id="mdClientReviewsGrid">
+        <div class="md-reviews-page active" data-page="0">
+          <div class="md-review-card"><p class="md-review-card__date">24.08.2025</p><h3 class="md-review-card__name">Татьяна</h3><p class="md-review-card__text">«Очень рада, что моим тренером стала именно Дарья! Профессионал с большой буквы. Всегда внимательна к технике, умеет мотивировать и выстраивает тренировки так, чтобы был максимальный эффект. Заниматься — одно удовольствие! Спасибо за моё преображение и новые силы!»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">24.08.2025</p><h3 class="md-review-card__name">Карина</h3><p class="md-review-card__text">«Я с января текущего года начала заниматься в зале с целью похудеть и подтянуть тело, и мне порекомендовали Дарью Морозову как персонального тренера. Она составила план питания, тренировок. Через 3 месяца был результат, продолжаем в более щадящем режиме. Она показала себя компетентным и грамотным тренером, знающим и любящим своё дело!»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">24.08.2025</p><h3 class="md-review-card__name">Денис</h3><p class="md-review-card__text">«Тренер Дарья Морозова — супер! Профессиональный подход к системе тренировок и питания Вам гарантирован! Следуя рекомендациям Дарьи, Вы сможете не только поддерживать форму, но и подготовиться к профессиональным соревнованиям!»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">24.09.2025</p><h3 class="md-review-card__name">Светлана</h3><p class="md-review-card__text">«Рекомендую тренера Дарью как первоклассного специалиста! В её работе сочетается глубокий профессионализм и индивидуальный подход. Дарья грамотно подбирает программу тренировок, основанную на знаниях, и даёт чёткие рекомендации по питанию, рассчитывая комфортное КБЖУ. Особо ценно, что ей можно задавать любые вопросы — всё объясняется просто и доступно. Если довериться её опыту и следовать советам, результат гарантирован. Однозначно советую!»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">26.08.2025</p><h3 class="md-review-card__name">Екатерина</h3><p class="md-review-card__text">«Дарья очень грамотный и внимательный тренер, занимаюсь с ней второй год. Все тренировки проходят продуктивно, с полной отдачей, но при этом безопасно. Она учитывает все мои особенности по здоровью. С ней я себя чувствую великолепно после занятий. С Дарьей очень комфортно, она оптимистичная и заряженная. Ни за что не променяю своего тренера на другого.»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">24.09.2025</p><h3 class="md-review-card__name">Антон</h3><p class="md-review-card__text">«Опыт, индивидуальный подход, клиентоориентированность 👍»</p></div>
+        </div>
+
+        <div class="md-reviews-page" data-page="1">
+          <div class="md-review-card"><p class="md-review-card__date">24.09.2025</p><h3 class="md-review-card__name">Марина</h3><p class="md-review-card__text">«Дарья — первоклассный тренер и специалист своего дела! Смотришь на её отточенную фигуру и хочется так же. Она прекрасный пример для подражания. Занимаюсь с ней давно, т.к. вижу результат проделанной работы и радуюсь ему. Сейчас снова начала заниматься с тренером, чтобы прийти в лучшую форму, чтобы скорректировать технику упражнений и войти в режим. Дарья мне в этом помогает ❤️»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">24.09.2025</p><h3 class="md-review-card__name">Алина</h3><p class="md-review-card__text">«Тренила с Дашей с сентября по май 3 раза в неделю, и впервые в жизни ходила на тренировки по кайфу. Не потому, что надо и полезно, а потому что хочется и прикольно! Очень круто всё объясняет — технику, какие мышцы работают, зачем это упражнение нужно. Даша настоящий профессионал, красавица и просто хороший человек. Спасибо, Даша, что научила любить спорт) Я переехала в другой город, и пока не нашла своего тренера, после Даши это оказалось сложной задачей!»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">24.09.2025</p><h3 class="md-review-card__name">Полина</h3><p class="md-review-card__text">«С Дашей я занималась не так много, но даже за 2 месяца я увидела ого-го какие результаты (пошла я ради рекомпозиции тела): тело заметно подтянулось, ушло 4,5% жира, пришло 1,5 кг мышц. Я никогда не видела тело таким подтянутым, хоть изначально пришла с нормальной фигурой. Честно, вообще не хотелось уходить от Даши... Переехала в другой район, теперь планирую заниматься с ней дистанционно, потому что, кажется, что такого же мудрого, чуткого и комфортного тренера больше не найти!»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">24.09.2025</p><h3 class="md-review-card__name">Дарья</h3><p class="md-review-card__text">«Не хватит символов описать радости от тренировок с Дарьей Морозовой!) Грамотный и внимательный тренер. Все тренировки проходят чётко по плану и очень продуктивно, но при этом Даша учитывает все мои особенности по здоровью. После тренировок с ней не хочется отходить от зеркала, ведь результаты на лицо! Профессионал с большой буквы. Всегда внимательна к технике, умеет мотивировать и поддержать в нужный момент, бескрайне благодарна и рада, что нашла такого тренера!»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">25.09.2025</p><h3 class="md-review-card__name">Валерия</h3><p class="md-review-card__text">«Отличный тренер, составила программу полностью под меня, спустя два месяца тренировок я увидела результат, которым осталась очень довольна. С Дарьей очень комфортно заниматься, лучший тренер!»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">24.09.2025</p><h3 class="md-review-card__name">Артемий</h3><p class="md-review-card__text">«Дарья в DDX Fitness — высококвалифицированный и дисциплинированный тренер. Она строга в хорошем смысле этого слова, что помогает не расслабляться и выкладываться на полную. Её тренировки всегда хорошо спланированы и направлены на достижение конкретных целей. Благодаря такому подходу я вижу отличные результаты и прогресс! Рекомендую Дарью тем, кто ценит профессионализм и дисциплину в фитнесе.»</p></div>
+        </div>
+
+        <div class="md-reviews-page" data-page="2">
+          <div class="md-review-card"><p class="md-review-card__date">24.09.2025</p><h3 class="md-review-card__name">Кирилл</h3><p class="md-review-card__text">«Отличный компетентный Тренер с большой буквы! Настоятельно рекомендую к Дарье попасть на занятие. Уверенно скажу, что останетесь довольны!!!»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">05.10.2025</p><h3 class="md-review-card__name">Анастасия</h3><p class="md-review-card__text">«Даша — замечательный и высокопрофессиональный тренер! Занимаюсь с ней уже более трёх лет и с уверенностью могу сказать: каждая тренировка проходит с пользой и удовольствием. Даша разрабатывает программы исходя из индивидуальных целей и особенностей, помогает с питанием, всегда поддерживает и мотивирует на отличный результат. Занятия с ней пролетают легко и весело, не только потому, что тренировки эффективны, но и потому, что с Дашей просто приятно общаться!»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">26.09.2025</p><h3 class="md-review-card__name">Наталия</h3><p class="md-review-card__text">«Пришла в зал впервые в жизни месяц назад. Первым тренером, который меня встретил как дежурный в этот день, была Даша. И случился мэтч!!! Даша плавно ввела меня в мир фитнеса. Очень внимательно и подробно объяснила мне принципы достижения цели. Познакомила с тренажёрами, дала советы по питанию и режиму. И знаете что? Теперь Даша мой персональный тренер! И мы — одна команда!»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">05.10.2025</p><h3 class="md-review-card__name">Марина</h3><p class="md-review-card__text">«Тренер — бомба! На опыте, на понимании, отзывчивости, качестве построена каждая тренировка! Дарья и поможет если что, и подмотивирует где надо) Очень довольна, претензий к ней от слова совсем не бывает 🔥»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">07.10.2025</p><h3 class="md-review-card__name">Дарья</h3><p class="md-review-card__text">«Занимаюсь с Дарьей всего несколько занятий, но уже в полном восторге от результата. Она внимательно оценила мой уровень, составила индивидуальную программу и бережно следит за техникой. Нравится, что объяснения простые и понятные. Отдельный плюс — адекватная мотивация и поддержка, на тренировку идёшь с удовольствием. Рекомендую всем, кто хочет системно и безопасно прийти к форме мечты. А самой девушке — весёлая, позитивная, жизнерадостная и безбашенная, если не хватает адреналина, так только к ней»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">06.10.2025</p><h3 class="md-review-card__name">Галина</h3><p class="md-review-card__text">«Спасибо большое, Даша, за уникальный подход к клиенту, за профессионализм, за информацию, которая помогает держать себя в тонусе, ходить на тренировки и держать правильное питание, ну и конечно за изменение и мотивацию!!! Это лучший тренер, мотиватор и источник информации, которая меняет установки в голове!!!!»</p></div>
+        </div>
+
+        <div class="md-reviews-page" data-page="3">
+          <div class="md-review-card"><p class="md-review-card__date">13.10.2025</p><h3 class="md-review-card__name">Юлия</h3><p class="md-review-card__text">«Занимаюсь с Дашей уже год, как итог -10 кг, а тело стало сильнее и выносливее. Даша всегда внимательна к технике выполнения упражнений, самочувствию, желаниям и даже настроению своих подопечных! Тренировки никогда не бывают скучными из-за разнообразия программы — предлагает рабочую классику и новые упражнения. Всегда поддержит, подскажет и скорректирует, поднимет мотивацию! И что немаловажно — сама Даша в отличной физической форме, поэтому с ней нет никаких сомнений, что всё получится!»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">10.10.2025</p><h3 class="md-review-card__name">Анастасия</h3><p class="md-review-card__text">«Занималась у Даши ещё в другом клубе, вместе с ней перешла в DDX, потому что другого тренера для себя не рассматривала. Даша отличный профессионал и просто замечательный человек, каждая тренировка проходит максимально продуктивно, результат не заставит себя долго ждать.»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">29.12.2025</p><h3 class="md-review-card__name">Дарья</h3><p class="md-review-card__text">«Занимаюсь с Дашей 2-й месяц и в восторге от тренировок) Она умеет заряжать таким позитивом, что идёшь в зал, как на праздник. При этом техника для неё — святое, всё поправит и объяснит. И глядя на её собственную отличную форму, по-хорошему завидуешь и хочешь так же) Она не просто тренер, а главный мотиватор. Очень её рекомендую!»</p></div>
+          <div class="md-review-card"><p class="md-review-card__date">28.12.2025</p><h3 class="md-review-card__name">Анна</h3><p class="md-review-card__text">«Занимаюсь с Дарьей пока только месяц, но это было прямое попадание в тренера. Всё доступно объясняется, постоянный контроль техники, чётко выстроенная программа, индивидуальный подход. С Дарьей сразу очень легко как с человеком и очень интенсивно как с тренером. Профессионал в своём деле, 10/10.»</p></div>
+        </div>
+      </div>
+
+      <div class="md-reviews-pagination" id="mdReviewsPagination">
+        <button class="md-reviews-pagination__btn" id="mdReviewsPrev" aria-label="Предыдущая страница" disabled>
+          <svg viewBox="0 0 20 20" fill="none"><path d="M12.5 5L7.5 10L12.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </button>
+        <button class="md-reviews-pagination__btn active" data-page="0">1</button>
+        <button class="md-reviews-pagination__btn" data-page="1">2</button>
+        <button class="md-reviews-pagination__btn" data-page="2">3</button>
+        <button class="md-reviews-pagination__btn" data-page="3">4</button>
+        <button class="md-reviews-pagination__btn" id="mdReviewsNext" aria-label="Следующая страница">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Rules Section ===== -->
+  <div class="md-rules" id="rules">
+    <button class="md-sec__trigger" type="button" aria-expanded="true" aria-controls="secBodyRules" id="secTriggerRules">
+      <span class="md-sec__trigger-text">Правила записи</span>
+      <span class="md-sec__trigger-arrow" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#1ea1b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </span>
+    </button>
+    <div class="md-sec__body" id="secBodyRules" style="padding-top:24px;">
+      <div class="md-rules__card">
+        <div class="md-rules__grid">
+          <div class="md-rules__cell"><p class="md-rules__cell-title md-rules__cell-title--teal">Отмена занятия</p><p class="md-rules__cell-text">Отмена занятия за сутки! В случае отмены персональной тренировки или переноса по просьбе клиента, менее чем за 24 часа до назначенного времени — тренировка автоматически списывается. (Исключение составляет, справка по болезни).</p></div>
+          <div class="md-rules__sep"></div>
+          <div class="md-rules__cell"><p class="md-rules__cell-title md-rules__cell-title--orange">Опоздание</p><p class="md-rules__cell-text">Если клиент опаздывает, то мы занимаемся ровно столько, сколько осталось у нас времени от занятия, с учетом вашего опоздания. Это связано с тем, что после вас, идёт следующий клиент, который не обязан ждать.</p></div>
+          <div class="md-rules__cell"><p class="md-rules__cell-title md-rules__cell-title--orange">Порядок оплаты</p><p class="md-rules__cell-text">Оплата за тренировки осуществляется ЗАРАНЕЕ и составляет не менее половины стоимости месячного абонемента! Оплата, закрепляет за вами ваше время. Не менее, чем за 3 дня до начала тренировок.</p></div>
+          <div class="md-rules__sep"></div>
+          <div class="md-rules__cell"><p class="md-rules__cell-title md-rules__cell-title--teal">Возврат денег</p><p class="md-rules__cell-text">После оплаты занятий — возврат денег не осуществляется! В связи с тем, что под вас подбирается расписание, пишется индивидуальная программа тренировок и питания.</p></div>
+          <div class="md-rules__cell"><p class="md-rules__cell-title md-rules__cell-title--teal">Отчеты</p><p class="md-rules__cell-text">Клиент обязан вовремя присылать отчет тренеру. От этого зависит ваш результат и вовремя составленная под вас тренировочная программа.</p></div>
+          <div class="md-rules__sep"></div>
+          <div class="md-rules__cell"><p class="md-rules__cell-title md-rules__cell-title--orange">Форс-мажор</p><p class="md-rules__cell-text">Форс-мажорные обстоятельства, обсуждаются в индивидуальном порядке.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FAQ Section ===== -->
+  <div class="md-faq" id="faq">
+    <button class="md-sec__trigger" type="button" aria-expanded="true" aria-controls="secBodyFaq" id="secTriggerFaq">
+      <span class="md-sec__trigger-text">Частые вопросы</span>
+      <span class="md-sec__trigger-arrow" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#1ea1b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </span>
+    </button>
+    <div class="md-sec__body" id="secBodyFaq" style="padding-top:24px;">
+      <div class="md-accordion">
+        <div class="md-accordion__item open">
+          <button class="md-accordion__trigger" type="button" aria-expanded="true" aria-controls="faq1"><span class="md-accordion__question">Какие требования к одежде и обуви для тренировки?</span><span class="md-accordion__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#1ea1b0" stroke-width="2" stroke-linecap="square"></path></svg></span></button>
+          <div class="md-accordion__body" id="faq1" style="max-height:200px"><div class="md-accordion__body-inner">Для тренировки рекомендуется носить удобную спортивную одежду, которая не будет стеснять движения. Обувь должна быть спортивной, с хорошей амортизацией и поддержкой, чтобы предотвратить травмы.</div></div>
+        </div>
+        <div class="md-accordion__item">
+          <button class="md-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq2"><span class="md-accordion__question">За сколько времени до тренировки рекомендуется прийти?</span><span class="md-accordion__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#1ea1b0" stroke-width="2" stroke-linecap="square"></path></svg></span></button>
+          <div class="md-accordion__body" id="faq2"><div class="md-accordion__body-inner">Рекомендуется приходить за 10-15 минут до начала тренировки. Это позволит подготовиться к тренировке, размяться и пообщаться с тренером.</div></div>
+        </div>
+        <div class="md-accordion__item">
+          <button class="md-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq3"><span class="md-accordion__question">Есть ли какие-то ограничения по еде перед тренировкой?</span><span class="md-accordion__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#1ea1b0" stroke-width="2" stroke-linecap="square"></path></svg></span></button>
+          <div class="md-accordion__body" id="faq3"><div class="md-accordion__body-inner">Не рекомендуется употреблять тяжелую пищу за 1-2 часа до тренировки. Можно съесть легкий перекус, содержащий углеводы и белки.</div></div>
+        </div>
+        <div class="md-accordion__item">
+          <button class="md-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq4"><span class="md-accordion__question">Каковы правила поведения в зале?</span><span class="md-accordion__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#1ea1b0" stroke-width="2" stroke-linecap="square"></path></svg></span></button>
+          <div class="md-accordion__body" id="faq4"><div class="md-accordion__body-inner">В зале важно соблюдать порядок и уважение к другим участникам. Необходимо убирать использованные гантели и другие тренажеры, следить за чистотой и порядком.</div></div>
+        </div>
+        <div class="md-accordion__item">
+          <button class="md-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq5"><span class="md-accordion__question">Какие меры безопасности необходимо соблюдать во время тренировки?</span><span class="md-accordion__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#1ea1b0" stroke-width="2" stroke-linecap="square"></path></svg></span></button>
+          <div class="md-accordion__body" id="faq5"><div class="md-accordion__body-inner">Основные меры безопасности включают правильную технику выполнения упражнений, наличие тренера или партнера на тренировке, использование защитного оборудования и контроль над весом и интенсивностью.</div></div>
+        </div>
+        <div class="md-accordion__item">
+          <button class="md-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq6"><span class="md-accordion__question">Как можно связаться с тренером?</span><span class="md-accordion__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#1ea1b0" stroke-width="2" stroke-linecap="square"></path></svg></span></button>
+          <div class="md-accordion__body" id="faq6"><div class="md-accordion__body-inner">Вы можете написать мне в <a href="https://t.me/daria_alberti_fit" target="_blank">Telegram</a> или на <a href="https://wa.me/79067247132" target="_blank">WhatsApp</a></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CTA Footer ===== -->
+  <div class="md-cta">
+    <p class="md-cta__credit">Хочешь такой же сайт? <a href="https://t.me/money_hustla" style="color:var(--md-teal);text-decoration:none;border-bottom:1px solid var(--md-teal);">Напиши сюда</a></p>
+  </div>
+
+</section>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
